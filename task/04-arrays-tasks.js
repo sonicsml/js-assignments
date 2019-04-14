@@ -23,12 +23,10 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
-    for (var i=0; i<arr.length; i++) {
-      if (arr[i] == value) {
-        return (arr.indexOf(value));
-      }
-        return (-1);
-    }
+  if (arr.indexOf(value)) {
+    return arr.indexOf(value);
+  }
+  return (-1);
 }
 
 /**
@@ -43,11 +41,9 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-  len[0] = 1;
-  for (var i = 0; i < len.length; i++) {
-    len[i].push(i+2); 
-  }
-  return len;
+  let res = new Array(len).fill(0);
+  res.forEach((_, i, arr) => arr[i] = 2*i+1);
+  return res;
 }
 
 
@@ -94,7 +90,7 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
-   throw new Error('Not implemented');
+    return arr.filter(e => typeof e === 'string' && e !== '');
 }
 
 /**
@@ -125,7 +121,7 @@ function removeFalsyValues(arr) {
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
 function getUpperCaseStrings(arr) {
-   throw new Error('Not implemented');
+    return  arr.map(function(x){ return x.toUpperCase() });
 }
 
 
