@@ -31,7 +31,7 @@
  */
 function getFizzBuzz(num) {
         if (i%15 == 0) {
-            return ('FizzBizz');
+            return ('FizzBuzz');
         }
         else
         if (i%3 == 0) {
@@ -39,7 +39,7 @@ function getFizzBuzz(num) {
         }
         else
         if (i%5 == 0) {
-            return ('Bizz');
+            return ('Buzz');
         }
         else
             return (i);
