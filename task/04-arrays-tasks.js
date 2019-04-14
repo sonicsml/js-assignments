@@ -23,7 +23,12 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
-   throw new Error('Not implemented');
+    for (var i=0; i<arr.length; i++) {
+      if (arr[i] == value) {
+        return (arr.indexOf(value));
+      }
+        return (-1);
+    }
 }
 
 /**
@@ -38,7 +43,11 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-   throw new Error('Not implemented');
+  len[0] = 1;
+  for (var i = 0; i < len.length; i++) {
+    len[i].push(i+2); 
+  }
+  return len;
 }
 
 
